@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Для самой лучшей мамы ❤️</title>
+<style>
+:root{--pink:#ff6f9f;--deep:#8d3d72;--cream:#fff8f4}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#57334b;background:linear-gradient(135deg,#fff0f5,#ffe3ec 48%,#f9e8ff);overflow-x:hidden}
+main{min-height:100vh;display:grid;place-items:center;padding:30px 16px;position:relative}
+.card{width:min(760px,100%);text-align:center;background:#ffffffd9;backdrop-filter:blur(12px);border:1px solid #fff;border-radius:30px;padding:clamp(28px,6vw,58px);box-shadow:0 25px 80px #a94e7922;position:relative;z-index:1}
+.heart{font-size:56px;display:inline-block;animation:pulse 1.5s infinite}
+h1{font-size:clamp(36px,7vw,66px);line-height:1.05;margin:14px 0;color:var(--deep);letter-spacing:-2px}
+h1 span{color:var(--pink)}
+.lead{font-size:clamp(17px,2.5vw,21px);line-height:1.7;color:#805b70;max-width:570px;margin:0 auto}
+.divider{width:75px;height:4px;background:linear-gradient(90deg,#ff8bb2,#c28bff);border-radius:9px;margin:27px auto}
+.note{font-size:17px;line-height:1.8;color:#77546a;margin:0 auto 28px;max-width:560px}
+button{border:0;border-radius:999px;padding:15px 25px;background:linear-gradient(110deg,#ff75a3,#bb83e8);color:white;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 9px 25px #d56b9b40;transition:.2s}
+button:hover{transform:translateY(-3px) scale(1.02)}
+#surprise{display:none;margin:25px auto 0;padding:20px;border-radius:18px;background:#fff0f6;color:#a04778;font-size:19px;line-height:1.6;animation:appear .5s ease}
+footer{margin-top:28px;color:#ad8199;font-size:13px}
+.float{position:fixed;opacity:.35;animation:drift 8s ease-in-out infinite;pointer-events:none}
+.f1{top:9%;left:8%;font-size:34px}.f2{top:20%;right:10%;font-size:26px;animation-delay:1s}.f3{bottom:13%;left:12%;font-size:29px;animation-delay:2s}.f4{bottom:10%;right:9%;font-size:38px;animation-delay:3s}
+@keyframes pulse{50%{transform:scale(1.16)}}
+@keyframes drift{50%{transform:translateY(-22px) rotate(12deg)}}
+@keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="float f1">💗</div><div class="float f2">✨</div><div class="float f3">🌷</div><div class="float f4">💕</div>
+<main>
+  <section class="card">
+    <div class="heart">❤️</div>
+    <h1>Привет, <span>мама!</span></h1>
+    <p class="lead">Я сделал для тебя этот сайт. Он особенный, потому что сделан с любовью — специально для тебя!</p>
+    <div class="divider"></div>
+    <p class="note">Спасибо тебе за заботу, доброту, поддержку и за то, что ты всегда рядом. Ты у меня самая лучшая мама на свете!</p>
+    <button id="surpriseBtn" type="button">Нажми на меня ✨</button>
+    <div id="surprise">Мамочка, я тебя очень сильно люблю!<br>Обнимаю крепко-крепко! 🤗💖</div>
+    <footer>С любовью, твой ребёнок ❤️</footer>
+  </section>
+</main>
+<script>
+document.getElementById('surpriseBtn').addEventListener('click',()=>{
+  const box=document.getElementById('surprise');
+  box.style.display=box.style.display==='block'?'none':'block';
+  document.getElementById('surpriseBtn').textContent=box.style.display==='block'?'Ещё раз ❤️':'Нажми на меня ✨';
+});
+</script>
+</body>
+</html>
